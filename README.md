@@ -8,6 +8,17 @@ Based on info from: https://wiki.teamfortress.com/wiki/Linux_dedicated_server
 
 Runs TF2 server as a Docker container in EC2
 
+This stack creates an EC2 keypair using whatever public key you add to the config.  You could do something like the following to use your SSH key:
+```
+    $ cat ~/.ssh/id_rsa.pub | pulumi config set publicKey
+```
+
+The reason I did this was really to play with pulumi, so the App coud be anything.  You can change the user-data to have the EC2 instance start-up whatever you want.  You could also choose a different AMI.
+
+I chose running a TF2 server because of nostalgia, and it requires handling a "secret" (if you want to call it that) i.e. the Steam API key.  For now, it's not handled correctly, since it ends-up in the local config file and in the EC2 instance's user-data.
+
+In a future update, I'll more securely handle having the EC2 instance get the secret (probably from Parameter Store) and use it only in memory.  (Or, I'll just update the Docker image to handle getting it.)
+
 ## Prerequisites
 
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
