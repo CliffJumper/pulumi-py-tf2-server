@@ -24,6 +24,7 @@ In a future update, I'll more securely handle having the EC2 instance get the se
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
 1. [Configure Pulumi for AWS](https://www.pulumi.com/docs/intro/cloud-providers/aws/setup/)
 1. [Configure Pulumi for Python](https://www.pulumi.com/docs/intro/languages/python/)
+1. [Pull and deploy the requisite Infrastructure project](https://github.com/CliffJumper/pulumi-py-tf2-infra)
 
 ## Deploying and running the program
 
