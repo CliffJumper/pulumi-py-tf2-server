@@ -1,0 +1,3 @@
+name: tf2-server
+runtime: python
+description: An AWS env to run a TF2 Server

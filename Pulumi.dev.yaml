@@ -1,0 +1,5 @@
+config:
+  aws:profile: <your aws profile name here>
+  aws:region: us-east-2
+  tf2-server:publickey: <put ssh public key here>
+  tf2-server:steam_token: <your steam token here>
